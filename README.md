@@ -1,3 +1,3 @@
 # MovieRecommendationSystem
  A content-based movie recommendation system built using TMDb data.  
- Deployed app: https://codemovies.herokuapp.com/
+ Deployed app: <a href="https://codemovies.herokuapp.com/" target="_blank">https://codemovies.herokuapp.com/</a>
