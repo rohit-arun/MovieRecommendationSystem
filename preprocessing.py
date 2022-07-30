@@ -1,6 +1,5 @@
 import pandas as pd
 import ast
-import nltk
 from nltk.corpus import stopwords
 
 pd.options.mode.chained_assignment = None
