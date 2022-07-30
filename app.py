@@ -1,8 +1,7 @@
 import streamlit as st
 import difflib
 import requests
-from preprocessing import export_movies
-from similarity import similarity_score
+from similarity_calculator import similarity_score, export_movies
 
 vote_count_df = export_movies[['title', 'vote_count']]
 vote_count_df.sort_values(by=['vote_count'], ascending=False, inplace=True)
