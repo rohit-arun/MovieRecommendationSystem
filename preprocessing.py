@@ -48,3 +48,6 @@ movies_tags = movies[['id', 'title']]
 movies_tags['tags'] = movies['overview'] + movies['genres'] + movies['keywords'] + movies['director'] + movies['cast']
 movies_tags['tags'] = movies_tags['tags'].apply(lambda x:" ".join(x))
 movies_tags['tags'] = movies_tags['tags'].apply(lambda x:x.lower())
+
+export_movies.to_pickle("model/export_movies.pkl")
+movies_tags.to_pickle("model/movies_tags.pkl")
