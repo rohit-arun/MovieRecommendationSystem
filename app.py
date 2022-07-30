@@ -2,7 +2,7 @@ import streamlit as st
 import difflib
 import requests
 from preprocessing import export_movies
-from cosine_similarity import similarity_score
+from similarity import similarity_score
 
 vote_count_df = export_movies[['title', 'vote_count']]
 vote_count_df.sort_values(by=['vote_count'], ascending=False, inplace=True)
