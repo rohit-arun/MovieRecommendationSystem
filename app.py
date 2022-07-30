@@ -4,7 +4,7 @@ import requests
 from similarity_calculator import similarity_score, export_movies
 
 vote_count_df = export_movies[['title', 'vote_count']]
-vote_count_df.sort_values(by=['vote_count'], ascending=False, inplace=True)
+vote_count_sorted = vote_count_df.sort_values(by=['vote_count'], ascending=False)
 
 st.set_page_config(
     page_title="Movie Recommendation System",
@@ -57,7 +57,7 @@ def recommend(movie_title):
     flattened_recommended_director = [director_name for directors in recommended_director for director_name in directors]
     return [recommended_title, recommended_title_posters, recommended_rating, recommended_plot, recommended_release_date, recommended_genres, flattened_recommended_director, recommended_cast]
 
-selected_movie = st.selectbox('Find movies similar to', vote_count_df['title'], index=0)
+selected_movie = st.selectbox('Find movies similar to', vote_count_sorted['title'], index=0)
 
 if st.button("Recommend"):
     with st.spinner('Recommending...'):
