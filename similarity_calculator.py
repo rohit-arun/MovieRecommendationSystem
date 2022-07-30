@@ -7,4 +7,4 @@ movies_tags = pd.read_pickle('model/movies_tags.pkl')
 
 vectorizer = CountVectorizer()
 feature_vectors = vectorizer.fit_transform(movies_tags['tags'])
-similarity = cosine_similarity(feature_vectors)
+similarity_score = cosine_similarity(feature_vectors)
