@@ -5,8 +5,6 @@ from nltk.corpus import stopwords
 
 pd.options.mode.chained_assignment = None
 
-nltk.download('stopwords')
-
 movies = pd.read_csv('datasets/tmdb.csv', index_col=0)
 movies.rename(columns = {'crew':'director'}, inplace=True)
 movies.fillna('', inplace=True)
